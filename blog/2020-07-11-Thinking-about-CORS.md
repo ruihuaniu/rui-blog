@@ -2,7 +2,7 @@
 title: Thinking about CORS
 author: Ruihua
 description: In-depth understanding of CORS
-image: /img/cover.jpg
+
 tags: [IT, Front end, HTTP, CORS]
 ---
 
