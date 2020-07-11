@@ -2,7 +2,7 @@
 title: Thinking about CORS
 author: Ruihua
 description: In-depth understanding of CORS
-draft: true
+draft: false
 tags: [IT, Front end, HTTP, CORS]
 ---
 
@@ -43,4 +43,6 @@ According to the definition above, it's clear to see the reason is because of th
 
 #### What is the same-origin policy?
 
-The policy defines that if the protocol, domain name, or port is different, they cannot connect with each other.
+The policy defines that if the protocol, domain name, or port is different, they cannot interact with each other. It doesn't mean a web page cannot embed an image, css, etc. from a different origin, because same-origin policy only applies to scripts. The rules are listed below:
+
+-
