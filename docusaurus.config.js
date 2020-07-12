@@ -1,7 +1,7 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Rui Blog',
+  tagline: 'A place to share my knowledge and ideas',
+  url: 'https://ruiblog.tk',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'Ruihua', // Usually your GitHub org/user name.
@@ -21,9 +21,14 @@ module.exports = {
         //   position: 'left',
         // },
         // { to: 'blog', label: 'Blog', position: 'left' },
+        // {
+        //   href: 'https://github.com/bartonniu',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
         {
-          href: 'https://github.com/bartonniu',
-          label: 'GitHub',
+          to: 'tags/',
+          label: 'Tags',
           position: 'right',
         },
       ],
