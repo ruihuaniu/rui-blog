@@ -3,7 +3,7 @@ title: Thinking about CORS
 author: Ruihua
 description: In-depth understanding of CORS
 draft: false
-tags: [IT, Front end, HTTP, CORS]
+tags: [IT, Front end, HTTP, CORS, English]
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -105,7 +105,8 @@ Access-Control-Allow-Credentials: true
 Access-Control-Max-Age: 604800   // 7 days
 ```
 
-> https://www.ruanyifeng.com/blog/2016/04/cors.html
+> https://www.ruanyifeng.com/blog/2016/04/cors.html  
+> https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 ### Conclusion
 
