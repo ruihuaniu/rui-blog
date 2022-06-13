@@ -138,13 +138,19 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      plugins: [
-        [
-          require.resolve("@cmfcmf/docusaurus-search-local"),
-        ]
 
-      ],
     }),
+
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        language: ["en", "zh"],
+        indexDocs: false
+      }
+    ]
+
+  ],
 };
 
 module.exports = config;
