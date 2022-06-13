@@ -1,6 +1,7 @@
 ---
 title: REST API vs Websocket
-author: Ruihua
+# author: Ruihua
+authors: [ruihua]
 description: In-depth understanding of REST API and Websocket
 draft: false
 tags: [IT, Front end, REST, Websocket, English]

@@ -1,6 +1,7 @@
 ---
 title: Styled components VS CSS modules
-author: Ruihua
+# author: Ruihua
+authors: [ruihua]
 description: In-depth understanding of styled components and css modules
 draft: false
 tags: [IT, Front end, CSS, English]

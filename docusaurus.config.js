@@ -47,6 +47,8 @@ const config = {
         blog: {
           routeBasePath: '/',
           showReadingTime: true,
+          blogSidebarTitle: 'All Blogs',
+          blogSidebarCount: 'ALL',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -72,11 +74,16 @@ const config = {
           //   type: 'doc',
           //   docId: 'doc1',
           //   position: 'left',
-          //   label: 'Tutorial',
+          //   label: 'Docs',
           // },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/ruihuaniu',
+            to: '/tags',
+            label: 'Tags',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/ruihuaniu/rui-blog',
             label: 'GitHub',
             position: 'right',
           },
