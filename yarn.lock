@@ -9,9 +9,32 @@
   dependencies:
     "@algolia/autocomplete-shared" "1.6.3"
 
+"@algolia/autocomplete-js@^1.5.1":
+  "integrity" "sha512-WgzufbwaAU6owis5NK/02q21zPyUW5lji+KRr1zgJffxW8nX5SGZ8OWmv73J187klwURHymxqsBEV4fdj0LDuw=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-js/-/autocomplete-js-1.6.3.tgz"
+  "version" "1.6.3"
+  dependencies:
+    "@algolia/autocomplete-core" "1.6.3"
+    "@algolia/autocomplete-preset-algolia" "1.6.3"
+    "@algolia/autocomplete-shared" "1.6.3"
+    "htm" "^3.0.0"
+    "preact" "^10.0.0"
+
+"@algolia/autocomplete-preset-algolia@1.6.3":
+  "integrity" "sha512-IJVyknSDZJRheE5sKffRJN7ukJJDAtvuKiHrk0VLZCJHR/o7XQkowu/6axhUIBRZ6Q2JFzV9hzYZ0PbtSJo9gA=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.6.3.tgz"
+  "version" "1.6.3"
+  dependencies:
+    "@algolia/autocomplete-shared" "1.6.3"
+
 "@algolia/autocomplete-shared@1.6.3":
   "integrity" "sha512-UV46bnkTztyADFaETfzFC5ryIdGVb2zpAoYgu0tfcuYWjhg1KbLXveFffZIrGVoboqmAk1b+jMrl6iCja1i3lg=="
   "resolved" "https://registry.npmjs.org/@algolia/autocomplete-shared/-/autocomplete-shared-1.6.3.tgz"
+  "version" "1.6.3"
+
+"@algolia/autocomplete-theme-classic@^1.5.1":
+  "integrity" "sha512-TGtErtYlhDa/88jCzmYK2uvPEKEDs073Uj11BAN3W+yrrpDMEjcGXvOFbUGR9Gb+nxlCznM9wK2/j8932DAXXw=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-theme-classic/-/autocomplete-theme-classic-1.6.3.tgz"
   "version" "1.6.3"
 
 "@algolia/cache-browser-local-storage@4.13.1":
@@ -69,7 +92,7 @@
     "@algolia/requester-common" "4.13.1"
     "@algolia/transporter" "4.13.1"
 
-"@algolia/client-search@4.13.1":
+"@algolia/client-search@^4.12.0", "@algolia/client-search@^4.5.1", "@algolia/client-search@^4.9.1", "@algolia/client-search@4.13.1":
   "integrity" "sha512-YQKYA83MNRz3FgTNM+4eRYbSmHi0WWpo019s5SeYcL3HUan/i5R09VO9dk3evELDFJYciiydSjbsmhBzbpPP2A=="
   "resolved" "https://registry.npmjs.org/@algolia/client-search/-/client-search-4.13.1.tgz"
   "version" "4.13.1"
@@ -1164,6 +1187,20 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     "to-fast-properties" "^2.0.0"
 
+"@cmfcmf/docusaurus-search-local@^0.11.0":
+  "integrity" "sha512-UzJ0G7JfrhuXJ9h79vforQZs05C5rWhXqrK7C5ie1ImHLTC4RPW7FHagIpZULhcA2PbDkc4ewnWVIufLKq+KzA=="
+  "resolved" "https://registry.npmjs.org/@cmfcmf/docusaurus-search-local/-/docusaurus-search-local-0.11.0.tgz"
+  "version" "0.11.0"
+  dependencies:
+    "@algolia/autocomplete-js" "^1.5.1"
+    "@algolia/autocomplete-theme-classic" "^1.5.1"
+    "@algolia/client-search" "^4.12.0"
+    "algoliasearch" "^4.12.0"
+    "cheerio" "^1.0.0-rc.9"
+    "clsx" "^1.1.1"
+    "lunr-languages" "^1.4.0"
+    "mark.js" "^8.11.1"
+
 "@colors/colors@1.5.0":
   "integrity" "sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ=="
   "resolved" "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz"
@@ -1183,7 +1220,7 @@
     "@docsearch/css" "3.1.0"
     "algoliasearch" "^4.0.0"
 
-"@docusaurus/core@2.0.0-beta.21":
+"@docusaurus/core@^v2.0.0-beta.21", "@docusaurus/core@2.0.0-beta.21":
   "integrity" "sha512-qysDMVp1M5UozK3u/qOxsEZsHF7jeBvJDS+5ItMPYmNKvMbNKeYZGA0g6S7F9hRDwjIlEbvo7BaX0UMDcmTAWA=="
   "resolved" "https://registry.npmjs.org/@docusaurus/core/-/core-2.0.0-beta.21.tgz"
   "version" "2.0.0-beta.21"
@@ -2293,7 +2330,7 @@
   dependencies:
     "@algolia/events" "^4.0.1"
 
-"algoliasearch@^4.0.0", "algoliasearch@^4.13.1", "algoliasearch@>= 3.1 < 5":
+"algoliasearch@^4.0.0", "algoliasearch@^4.12.0", "algoliasearch@^4.13.1", "algoliasearch@^4.9.1", "algoliasearch@>= 3.1 < 5":
   "integrity" "sha512-dtHUSE0caWTCE7liE1xaL+19AFf6kWEcyn76uhcitWpntqvicFHXKFoZe5JJcv9whQOTRM6+B8qJz6sFj+rDJA=="
   "resolved" "https://registry.npmjs.org/algoliasearch/-/algoliasearch-4.13.1.tgz"
   "version" "4.13.1"
@@ -2720,7 +2757,7 @@
     "domhandler" "^5.0.3"
     "domutils" "^3.0.1"
 
-"cheerio@^1.0.0-rc.11":
+"cheerio@^1.0.0-rc.11", "cheerio@^1.0.0-rc.9":
   "integrity" "sha512-bQwNaDIBKID5ts/DsdhxrjqFXYfLw4ste+wMKqWA8DyKcS4qwsPP4Bk8ZNaTJjvpiX/qW3BT4sU7d6Bh5i+dag=="
   "resolved" "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.11.tgz"
   "version" "1.0.0-rc.11"
@@ -4198,6 +4235,11 @@
     "readable-stream" "^2.0.1"
     "wbuf" "^1.1.0"
 
+"htm@^3.0.0":
+  "integrity" "sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ=="
+  "resolved" "https://registry.npmjs.org/htm/-/htm-3.1.1.tgz"
+  "version" "3.1.1"
+
 "html-entities@^2.3.2":
   "integrity" "sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA=="
   "resolved" "https://registry.npmjs.org/html-entities/-/html-entities-2.3.3.tgz"
@@ -4863,12 +4905,22 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"lunr-languages@^1.4.0":
+  "integrity" "sha512-Be5vFuc8NAheOIjviCRms3ZqFFBlzns3u9DXpPSZvALetgnydAN0poV71pVLFn0keYy/s4VblMMkqewTLe+KPg=="
+  "resolved" "https://registry.npmjs.org/lunr-languages/-/lunr-languages-1.9.0.tgz"
+  "version" "1.9.0"
+
 "make-dir@^3.0.0", "make-dir@^3.0.2", "make-dir@^3.1.0":
   "integrity" "sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw=="
   "resolved" "https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz"
   "version" "3.1.0"
   dependencies:
     "semver" "^6.0.0"
+
+"mark.js@^8.11.1":
+  "integrity" "sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ=="
+  "resolved" "https://registry.npmjs.org/mark.js/-/mark.js-8.11.1.tgz"
+  "version" "8.11.1"
 
 "markdown-escapes@^1.0.0":
   "integrity" "sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg=="
@@ -5761,6 +5813,11 @@
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
+
+"preact@^10.0.0":
+  "integrity" "sha512-giqJXP8VbtA1tyGa3f1n9wiN7PrHtONrDyE3T+ifjr/tTkg+2N4d/6sjC9WyJKv8wM7rOYDveqy5ZoFmYlwo4w=="
+  "resolved" "https://registry.npmjs.org/preact/-/preact-10.7.3.tgz"
+  "version" "10.7.3"
 
 "prepend-http@^2.0.0":
   "integrity" "sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA=="

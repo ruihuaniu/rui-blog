@@ -138,6 +138,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      plugins: [
+        [
+          require.resolve("@cmfcmf/docusaurus-search-local"),
+        ]
+
+      ],
     }),
 };
 
