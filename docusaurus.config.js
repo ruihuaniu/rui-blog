@@ -74,14 +74,14 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Leetcode/test',
+            docId: 'leetcode/index',
             position: 'left',
             label: 'Leetcode',
           },
           //{ to: '/docs', label: 'Leetcode', position: 'left' },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            to: '/docs/tags',
+            to: '/tags',
             label: 'Tags',
             position: 'right',
           },
@@ -94,16 +94,25 @@ const config = {
       },
       footer: {
         style: 'dark',
-        // links: [
-        //   {
-        //     title: 'Docs',
-        //     items: [
-        //       {
-        //         label: 'Tutorial',
-        //         to: '/docs/intro',
-        //       },
-        //     ],
-        //   },
+        links: [
+          {
+            title: 'Blog',
+            items: [
+              {
+                label: 'Blog',
+                to: '/',
+              },
+            ],
+          },
+          {
+            title: 'Leetcode',
+            items: [
+              {
+                label: 'Leetcode',
+                to: '/docs/leetcode/',
+              },
+            ],
+          },
         //   {
         //     title: 'Community',
         //     items: [
@@ -134,7 +143,7 @@ const config = {
         //       },
         //     ],
         //   },
-        // ],
+        ],
         copyright: `Copyright © ${new Date().getFullYear()} Ruihua All Rights Reserved.`,
       },
       prism: {
