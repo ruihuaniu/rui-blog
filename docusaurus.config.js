@@ -111,6 +111,10 @@ const config = {
                 label: 'Leetcode',
                 to: '/docs/leetcode/',
               },
+              {
+                label: 'Tags',
+                to: '/docs/tags/',
+              },
             ],
           },
         //   {
