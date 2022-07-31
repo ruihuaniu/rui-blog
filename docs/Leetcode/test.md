@@ -1,17 +1,47 @@
 ---
 ##id: leetcode
 title: leetcode test 
+tags: [Leetcode,Algorithm]
 ---
 
 You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
 
-export const Highlight = ({children, color}) => ( <span style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>{children}</span> );
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+```jsx live noInline
+function removeDuplicateLetters(s) {
+  let stack = [];
+  for (let i = 0; i < s.length; i++) {
+    if (stack.indexOf(s[i]) !== -1) continue;
+    while (stack.length && stack[stack.length - 1] > s[i] && s.indexOf(stack[stack.length - 1], i) !== -1) {
+      stack.pop();
+    }
+    stack.push(s[i])
+  }
+  return stack.join("")
+};
+
+const testCases=["bcabc","cbacdcbc"]
+
+
+function TestRun({codeFuc, testCases}) {
+  return (
+    <div>
+      <h3>Total test cases: {testCases.length}</h3>
+      <hr/>
+      {testCases.map((test,index)=><pre>
+        <b>Input: </b>"{test}"{'\n'}
+        <b>Output: </b>"{codeFuc(test)}"{'\n'}
+      </pre>)}
+    </div>
+  );
+}
+
+render(
+  <TestRun
+    codeFuc= {removeDuplicateLetters}
+    testCases={testCases}
+  />
+)
+```
 
 I can write **Markdown** alongside my _JSX_!

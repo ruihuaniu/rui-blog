@@ -31,6 +31,8 @@ const config = {
     locales: ['en', 'zh-Hans'],
   },
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   presets: [
     [
       'classic',
@@ -79,7 +81,7 @@ const config = {
           //{ to: '/docs', label: 'Leetcode', position: 'left' },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            to: '/tags',
+            to: '/docs/tags',
             label: 'Tags',
             position: 'right',
           },
