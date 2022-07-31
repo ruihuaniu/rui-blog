@@ -12,7 +12,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Rui Blog',
   tagline: 'A place to share my knowledge and ideas',
-  url: 'https://nlog.nrhmeta.com',
+  url: 'https://blog.nrhmeta.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   onBrokenLinks: 'throw',
@@ -37,7 +37,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          //routeBasePath: '/',
+          // routeBasePath: '/docs',
           sidebarPath: require.resolve('./sidebars.js'),
 
           // Please change this to your repo.
@@ -66,16 +66,17 @@ const config = {
       navbar: {
         title: 'Rui Blog',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Rui Blog',
           src: 'img/logo.svg',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'doc1',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
+          {
+            type: 'doc',
+            docId: 'Leetcode/test',
+            position: 'left',
+            label: 'Leetcode',
+          },
+          //{ to: '/docs', label: 'Leetcode', position: 'left' },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
             to: '/tags',
@@ -132,7 +133,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Rui Blog All Rights Reserved.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ruihua All Rights Reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
