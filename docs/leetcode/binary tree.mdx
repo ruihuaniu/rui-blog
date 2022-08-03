@@ -29,16 +29,11 @@ PostOrder: 4 5 2 6 7 3 1
 
 ### ✏  Code Editor
 
-**Print the level of each node**
+**1. Print the level of each node**
 
 ```jsx live noInline
-function TreeNode(val, left, right) {
-  this.val = (val===undefined ? 0 : val)
-  this.left = (left===undefined ? null : left)
-  this.right = (right===undefined ? null : right)
-}
-
 const res = {}
+
 function traverse(node, depth) {
   if(node===null) return;
   //console.log("node", node, "depth",depth);
@@ -47,77 +42,40 @@ function traverse(node, depth) {
   traverse(node.right, depth+1);
 };
 
-const root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
-
-const testCases=[root]
-
-
-function TestRun({codeFuc, testCases}) {
-
-  return (
-    <div>
-      <h3>Total test cases: {testCases.length}</h3>
-      <hr/>
-      {testCases.map((test,index)=><pre>
-        <b>Input: </b>"{JSON.stringify(test, null, 2)}"{'\n'}
-        <b>Output: </b>"{codeFuc(test,1),JSON.stringify(res,null, 2)}"{'\n'}
-      </pre>)}
-    </div>
-  );
-}
+const testCases=[binaryTree]
 
 render(
    <TestRun
     codeFuc= {traverse}
     testCases={testCases}
+    res={res}
   />
 )
 ```
 
 
 
-**Print the number of leaf of each node**
+**2. Print the number of leafs of each node**
 
 ```jsx live noInline
-function TreeNode(val, left, right) {
-  this.val = (val===undefined ? 0 : val)
-  this.left = (left===undefined ? null : left)
-  this.right = (right===undefined ? null : right)
-}
-
 const res = {}
+
 function traverse(node, depth) {
   if(node===null) return 0; 
   const leftCount= traverse(node.left, depth+1);
   const rightCount=traverse(node.right, depth+1);
   res[depth] = {node, count:leftCount+rightCount+1};
-    console.log("node", node, "count",leftCount+rightCount+1);
+   // console.log("node", node, "count",leftCount+rightCount+1);
   return leftCount+rightCount+1;
 };
 
-const root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
-
-const testCases=[root]
-
-
-function TestRun({codeFuc, testCases}) {
-
-  return (
-    <div>
-      <h3>Total test cases: {testCases.length}</h3>
-      <hr/>
-      {testCases.map((test,index)=><pre>
-        <b>Input: </b>"{JSON.stringify(test, null, 2)}"{'\n'}
-        <b>Output: </b>"{codeFuc(test,1),JSON.stringify(res,null, 2)}"{'\n'}
-      </pre>)}
-    </div>
-  );
-}
+const testCases=[binaryTree]
 
 render(
    <TestRun
     codeFuc= {traverse}
     testCases={testCases}
+    res={res}
   />
 )
 ```
