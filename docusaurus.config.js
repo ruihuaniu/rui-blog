@@ -81,6 +81,12 @@ const config = {
           //{ to: '/docs', label: 'Leetcode', position: 'left' },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
+            type: 'doc',
+            docId: 'challenges/index',
+            position: 'left',
+            label: 'Challenges',
+          },
+          {
             to: '/tags',
             label: 'Tags',
             position: 'right',

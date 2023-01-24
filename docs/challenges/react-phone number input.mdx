@@ -1,0 +1,59 @@
+---
+id: phone-number-input
+title: PhoneNumberInput Component
+tags: [React, Component, Practical]
+---
+
+### ⛳  Overview
+
+> Create a PhoneNumberInput component.    
+only accepts numerical digits
+> format the number automatically as (123)456-7890 by
+> - adding the parenthesis when the 4th digit is entered
+> - also adding - before 7th digit
+
+### 📃  Analysis
+:::tip Thoughts   
+ 
+ - Controlled input element
+ - Replace all non-numeric character with empty string
+ - Using slice or splice
+:::
+
+
+
+
+### ✏  Code
+
+```jsx live
+function PhoneNumberInput() {
+  const [value, setValue] = useState()
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    // highlight-next-line
+    let curr = value.replace(/\D/g, ""); // only show digit characters
+    if (curr.length > 6) {
+      curr = `${curr.slice(0,6)}-${curr.slice(6)}`
+    }
+    if (curr.length > 3) {
+      curr = `(${curr.slice(0, 3)})${curr.slice(3)}`
+    }
+    setValue(curr)
+}
+  
+  return (
+    <div>
+    <label for="phone-input"> Phone Number Input Field: </label>
+     <div>
+      <input id="phone-input" value = {value} onChange = {handleChange} />
+      </div>
+    </div>
+  )
+  }
+```
+
+
+
+
+
