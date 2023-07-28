@@ -1,5 +1,5 @@
 ---
-title: PDF Report with Echarts
+title: Frontend PDF Report Generation with Echarts
 authors: [ruihua]
 description: A practical solution to print PDF report with Echarts under any screen sizes
 draft: false
@@ -135,3 +135,10 @@ By using both react-to-print and getDataURL from Echarts, along with print media
 #### Known Pitfalls
 - The chart is now printed as an image, making the content within it (e.g., text) unselectable.
 > In most cases, this is not a significant issue since the other text outside the chart (e.g., tables, etc.) remains selectable.
+- The print preview window will always popup since the native `print` API is called.
+
+#### Future Improvements
+- Implement PDF generation on the server/backend side to create a smoother flow.
+  > Consider using Puppeteer to generate PDFs on the server side. (Echarts also supports server-side generation)
+- Add a print wizard to allow the user to customize the information shown on the PDF cover page. 
+  > This will enhance the report's appearance and provide a more professional touch.
