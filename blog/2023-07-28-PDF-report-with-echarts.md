@@ -11,16 +11,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img alt="cover image" src={useBaseUrl('img/charts.jpg')} />
 
 ### Overview
-PDF Report generation on the frontend is always a pain, especially when dealing with charts like that from Echarts. The layouts of charts could be a mess if not handled properly, the issue will be much more serious when considering there are so many different screen sizes. This is article is going to give a practical solution to print PDF report with Echarts.
+Generating PDF reports on the frontend, especially when dealing with charts like those from Echarts, can be challenging. Properly handling chart layouts and accommodating various screen sizes adds complexity. This article presents a practical solution for printing PDF reports with Echarts.
 
 
 ### Technologies used
 - [react-to-print](https://www.npmjs.com/package/react-to-print)
-  - Provides the control of which component to print, also with before print and after print callbacks
+  - Provides control over which component to print, along with before and after print callbacks.
 - [Echarts](https://echarts.apache.org/en/api.html#echartsInstance.getDataURL)
-  - `getDataURL()` function provides the base64 url which could be set as src of img tag
+  - Utilizes the `getDataURL()` function, which provides a base64 URL to be set as the source of an img tag.
 - print media query with css
-  - `@media print` query provides the ability to hide and show some elements on print
+  - The `@media print` query allows the ability to hide or show specific elements when printing.
 
 
 
@@ -142,13 +142,13 @@ export default BarChart;
 ``` 
 
 3. Apply print media query rules to related elements
-- `@media print` query not working with inline styles, so we need to wrap it within a Box element (MUI). The other workaround is to using the native div element with css class
-- `pageBreakAfter` is an important setting to avoid elements breaking at different PDF pages
+- The `@media print` query does not work with inline styles, so we wrap it within a Box element from Material-UI. Alternatively, you can use the native div element with a CSS class.
+- `pageBreakAfter`  is a crucial setting to avoid elements breaking at different PDF pages.
 
 
 ### Final results
-With using both react-to-print, getDataURL from echarts and print media query, it's possible to print PDF report with any charts from echarts with any screen sizes.
+By using both react-to-print and getDataURL from Echarts, along with print media queries, it is now possible to print PDF reports with any charts from Echarts, irrespective of the screen sizes.
 
-#### Pitfalls
-- The chart printed now is an image, and the content (eg. text) within it is not selectable. 
-> This is not a big deal for most of the case, since the other text within other elements(eg. table, etc.) are still selectable.
+#### Known Pitfalls
+- The chart is now printed as an image, making the content within it (e.g., text) unselectable.
+> In most cases, this is not a significant issue since the other text outside the chart (e.g., tables, etc.) remains selectable.
