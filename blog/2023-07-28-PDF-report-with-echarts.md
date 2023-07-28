@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img alt="cover image" src={useBaseUrl('img/charts.jpg')} />
 
 ### Overview
-Generating PDF reports on the frontend, especially when dealing with charts like those from Echarts, can be challenging. Properly handling chart layouts and accommodating various screen sizes adds complexity. This article presents a practical solution for printing PDF reports with Echarts.
+Generating PDF reports on the frontend, especially when dealing with charts like those from Echarts, can be challenging. Properly handling chart layouts and accommodating various screen sizes adds complexity. This article presents a practical solution for printing PDF reports with Echarts on the frontend.
 
 
 ### Technologies used
@@ -39,14 +39,9 @@ function PrintWrapper({ component }) {
   return (
     <Box>
       <Button onClick={handleClick}>Export as PDF</Button>
-      <Box  >
         <Box ref={componentRef}>
-          <Box sx={{ display: "none", "@media print": { pageBreakAfter: "always", width: "100vw", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" } }}>
-            <Typography variant="h1">{value}</Typography>
-          </Box>
           {component}
         </Box>
-      </Box>
     </Box>
 
   )
@@ -59,15 +54,10 @@ export default PrintWrapper
 ```
 function BarChart({ chartConfig}) {
   const barChartRef = useRef(null);
-
   const [imgSrc, setImgSrc] = useState();
 
   useEffect(() => {
-    let barChart;
-
-
-    if (barChartRef.current.clientHeight > 0) {
-      barChart = echarts.init(barChartRef.current, null, { renderer: 'svg' });
+     const barChart = echarts.init(barChartRef.current, null, { renderer: 'svg' });
 
       barChart.on('finished', function () { // setting imgSrc with echarts "finished" event is important, otherwise, the image will not be displayed
         setImgSrc(barChart.getDataURL());
@@ -85,7 +75,7 @@ function BarChart({ chartConfig}) {
       ]
     };
     barChart.setOption(option);
-    }
+    
 
   }, [chartConfig]);
 
