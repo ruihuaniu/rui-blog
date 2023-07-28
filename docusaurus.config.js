@@ -118,6 +118,15 @@ const config = {
                 to: '/docs/leetcode/',
               },
               {
+                label: 'Challenges',
+                to: '/docs/challenges/',
+              },
+            ],
+          },
+          {
+            title: 'Tags',
+            items: [
+              {
                 label: 'Tags',
                 to: '/docs/tags/',
               },
