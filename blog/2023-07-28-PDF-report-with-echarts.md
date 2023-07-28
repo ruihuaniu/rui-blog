@@ -33,7 +33,6 @@ function PrintWrapper({ component }) {
 
   const handlePrint = useReactToPrint({
     content: componentRef.current,
-    //documentTitle: "AwesomeFileName",
     removeAfterPrint: true
   });
 
@@ -66,26 +65,15 @@ function BarChart({ chartConfig}) {
   useEffect(() => {
     let barChart;
 
-    if (barChartRef.current) {
-      echarts.dispose(barChartRef.current)
-    }
 
     if (barChartRef.current.clientHeight > 0) {
       barChart = echarts.init(barChartRef.current, null, { renderer: 'svg' });
-      window.addEventListener('resize', barChart.resize);
 
-      barChart.on('finished', function () {
+      barChart.on('finished', function () { // setting imgSrc with echarts "finished" event is important, otherwise, the image will not be displayed
         setImgSrc(barChart.getDataURL());
       });
 
-
     const option = {
-      color: [...(chartConfig.color || defaultColorPalette)],
-      animation: false,
-      legend: { ...chartConfig.legendConfig },
-      tooltip: {
-        ...chartConfig.tooltipConfig
-      },
       xAxis: {
         ...chartConfig.xAxisConfig
       },
@@ -99,11 +87,6 @@ function BarChart({ chartConfig}) {
     barChart.setOption(option);
     }
 
-    return () => {
-      if (barChart) {
-        window.removeEventListener("resize", barChart.resize)
-      }
-    }
   }, [chartConfig]);
 
 
