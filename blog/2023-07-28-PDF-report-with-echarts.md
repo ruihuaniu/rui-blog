@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ### Overview
 Generating PDF reports on the frontend, especially when dealing with charts like those from Echarts, can be challenging. Properly handling chart layouts and accommodating various screen sizes adds complexity. This article presents a practical solution for printing PDF reports with Echarts on the frontend.
 
-
+<!--truncate-->
 ### Technologies used
 - [react-to-print](https://www.npmjs.com/package/react-to-print)
   - Provides control over which component to print, along with before and after print callbacks.
