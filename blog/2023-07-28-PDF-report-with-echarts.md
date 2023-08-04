@@ -75,8 +75,6 @@ function BarChart({ chartConfig}) {
       ]
     };
     barChart.setOption(option);
-    
-
   }, [chartConfig]);
 
 
@@ -86,7 +84,7 @@ function BarChart({ chartConfig}) {
         ref={barChartRef}
         sx={{
           width: '100%',
-          minWidth: '200px',
+          minWidth: '200px', 
           height: '100%',
           left: '4px',
           "@media print": {
@@ -132,3 +130,5 @@ By using both react-to-print and getDataURL from Echarts, along with print media
   > Consider using Puppeteer to generate PDFs on the server side. (Echarts also supports server-side generation)
 - Add a print wizard to allow the user to customize the information shown on the PDF cover page. 
   > This will enhance the report's appearance and provide a more professional touch.
+- Implement the print with iframe from scratch,.
+  > since this react-to-print lib is also using the iframe with some additional features which are not fully used.
