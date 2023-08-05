@@ -126,9 +126,11 @@ By using both react-to-print and getDataURL from Echarts, along with print media
 - The print preview window will always popup since the native `print` API is called.
 
 #### Future Improvements
-- Implement PDF generation on the server/backend side to create a smoother flow.
-  > Consider using Puppeteer to generate PDFs on the server side. (Echarts also supports server-side generation)
+- Refactor/Improve the code for chart image generation
+  > The current implementation requires significant modifications to the BarChart component, violating both the Open-Closed and Single Responsibility principles. 
 - Add a print wizard to allow the user to customize the information shown on the PDF cover page. 
   > This will enhance the report's appearance and provide a more professional touch.
+- Implement PDF generation on the server/backend side to create a smoother flow.
+  > Consider using Puppeteer to generate PDFs on the server side. (Echarts also supports server-side generation)
 - Implement the print with iframe from scratch,.
   > since this react-to-print lib is also using the iframe with some additional features which are not fully used.
