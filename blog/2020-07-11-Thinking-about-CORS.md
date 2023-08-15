@@ -1,7 +1,7 @@
 ---
 title: Thinking about CORS
 # author: Ruihua
-authors: [ruihua]
+authors: [Ruihua]
 description: In-depth understanding of CORS
 draft: false
 tags: [IT, Front end, HTTP, CORS, English]

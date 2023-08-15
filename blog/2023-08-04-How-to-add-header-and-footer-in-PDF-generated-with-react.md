@@ -1,6 +1,6 @@
 ---
 title: How to add header and footer in PDF generated with react in the frontend
-authors: [ruihua]
+authors: [Ruihua]
 description: A practical solution to print PDF report with header and footer in the frontend
 draft: false
 tags: [IT, Front end, PDF, Header, Footer, English]

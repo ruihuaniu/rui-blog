@@ -1,6 +1,6 @@
 ---
 title: Frontend PDF Report Generation with Echarts
-authors: [ruihua]
+authors: [Ruihua]
 description: A practical solution to print PDF report with Echarts under any screen sizes
 draft: false
 tags: [IT, Front end, Echarts, PDF,  English]
