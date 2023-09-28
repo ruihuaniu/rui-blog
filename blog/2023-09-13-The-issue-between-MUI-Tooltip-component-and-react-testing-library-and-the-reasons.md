@@ -71,7 +71,7 @@ One workaround is to use a different query api from react-testing-library to avo
   </Typography>
 </Tooltip>
 
-//This assertion with react-testing-library doesn't work: 
+//This assertion with react-testing-library works: 
 expect(screen.getByText( "typography content", {selector:"h6"})).toBeInTheDocument()
 ```
 
