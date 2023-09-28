@@ -24,6 +24,12 @@ There are normally two different approaches to create a proper multiple series b
 
 The common way to create a multiple datasets with multiple series boxplot chart
 
+![boxplot](/img/boxplot-without-outlier.png)
+
+
+<details >
+<summary>Code</summary>
+
 ```
 option = {
   legend:{},
@@ -63,7 +69,7 @@ option = {
         tooltip:["min", "Q1", "median", "Q3", "max"],
       }
     },
-    {
+    {    
       name: 'Category 2',
       type: 'boxplot',
       datasetIndex: 1,
@@ -76,8 +82,7 @@ option = {
   ]
 };
 ```
-
-
+</details>
 
 
 ### How to integrate boxplot chart with scatter (outliers) chart
@@ -86,6 +91,11 @@ It's common to show outliers in boxplot chart, and it can be done with combining
 There are multiple ways to combine boxplot chart with scatter chart, each has it's own pros and cons, let's take a look at them one by one.
 
 #### 1. Using different dataset and series for each category and each related outlier, category axis is the chart title
+
+![boxplot](/img/boxplot-outlier-1.png)
+
+<details >
+<summary>Code</summary>
 
 ```
 option = {
@@ -185,6 +195,7 @@ option = {
   ]
 };
 ```
+</details>
 
 
 Pros:
@@ -195,6 +206,12 @@ Cons:
 
 
 #### 2. Using different dataset and series for each category and each related outlier
+
+![boxplot](/img/boxplot-outlier-2.png)
+
+<details>
+<summary>Code</summary>
+
 ```
 option = {
   legend:{},
@@ -295,6 +312,11 @@ option = {
 ```
 
 
+
+</details>
+
+
+
 Pros:
 - Easy to understand
 
@@ -304,6 +326,12 @@ Cons:
 
 
 #### 3. Using one dataset for all categories, one dataset for all outliers, and multiple series(legends)
+
+![boxplot](/img/boxplot-outlier-3.png)
+
+<details>
+<summary>Code</summary>
+
 
 ```
 option = {
@@ -355,6 +383,7 @@ option = {
   ]
 };
 ```
+</details>
 
 Pros:
 - The outlier can be together with boxplot
@@ -369,6 +398,14 @@ Cons:
 
 
 #### 3.1 Improved version based on option 3
+
+![boxplot](/img/boxplot-outlier-3-1.png)
+
+
+<details>
+<summary>Code</summary>
+
+
 ```
 option = {
   legend:{},
@@ -421,7 +458,7 @@ option = {
   ]
 };
 ```
-
+</details>
 
 
 ### Final Thoughts
