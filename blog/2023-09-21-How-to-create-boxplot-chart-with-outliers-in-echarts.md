@@ -322,6 +322,7 @@ Pros:
 
 Cons:
 - Each outlier for a category shows next to each category boxplot, they are not really together
+  - There is a workaround mentioned [here](https://github.com/apache/echarts/issues/3944) if there is no dynamic change with the chart. eg. No legend clicking, etc
 
 
 
