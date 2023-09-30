@@ -1,6 +1,6 @@
 ---
 id: 1
-title: Two Sum with new solutions
+title: 1. Two Sum with new solutions
 tags: [Leetcode,Algorithm, Easy]
 ---
 
@@ -34,10 +34,11 @@ Output: [0,1]
 The normal way is to use two for loops to find the two numbers that add up to the target. But with using the javascript inbuilt Object or Map data types, we can reduce the time complexity from O(n^2) to O(n)
 
 :::tip
- Separate the question into 3 parts
+ Separate the question into 4 parts
  - Loop through the array
  - Keep track of the difference between each number and the target
- - Check if the difference exists in the Object/Map
+ - Check if the difference exists in the Object/Map variable
+ - If it exists, return the index, otherwise, store the index with the current number as the key
 :::
 
 
@@ -59,7 +60,7 @@ function twoSum(nums, target){
 ```
 
 
-#### 2. Option 2: Using one for loop with an extra Object
+#### 2. Option 2: Using one for loop with an extra object variable
 
 ```jsx live noInline
 function twoSumWithObject(nums, target) {
@@ -85,7 +86,7 @@ render(
 ```
 
 
-#### Option 3: Using one for loop with an extra Map
+#### Option 3: Using one for loop with an extra Map variable
 
 
 ```jsx live noInline
