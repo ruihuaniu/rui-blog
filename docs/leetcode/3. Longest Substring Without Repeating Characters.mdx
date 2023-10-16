@@ -1,0 +1,123 @@
+---
+id: 3
+title: 3. Longest Substring Without Repeating Characters
+tags: [Leetcode,Algorithm, Medium]
+draft: true
+---
+
+### ⛳  Leetcode Overview
+Given a string s, find the length of the longest substringwithout repeating characters.
+
+ 
+```
+Example 1:
+
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+Example 2:
+
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+Example 3:
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+ 
+ ```
+
+
+### 📃  Analysis
+At first glance, this leetcode seems not difficult at all, as only a loop and a variable to store the retrieved characters. However, after taking a deep look, we can see that the solution is not that simple. I'm going to explain what problem we are going to encounter and how to reolve it, and to know the "sliding window" at the end.
+
+:::tip
+ Separate the question into 3 parts
+ - Loop through the string
+ - Keep track of the retrieved characters
+ - Check if the new character exisits in the retrieved characters
+   - If it exists, storing the length of the retrieved characters, and then removing any characters before the character that is the same as the new character
+   - If not, putting the new character in the retrieved characters
+:::
+
+
+### ✏  Solutions
+
+#### 1. Option 1: Using two for loops
+
+:::warning Warnings
+ The solution below doesn't work, it just shows that the real solution is not that simple 
+:::
+
+```
+function lengthOfLongestSubstring(s) {
+    let res = [];
+    let retrieved = {};
+
+    for(let i =0; i<s.length; i++){
+        if(retrieved[s[i]]){
+            res.push(retrievedArr.length);
+            retrieved = {}; // This is where issue happens
+        }
+          retrieved[s[i]]= i;
+    }
+    return Math.max(...res,Object.keys(retrieved).length)
+};
+
+```
+
+
+#### 2. Option 2: Using one for loop with an extra object variable
+
+```jsx live noInline
+function twoSumWithObject(nums, target) {
+  let obj={};
+  for (let i = 0; i < nums.length; i++) {
+    const diff = target - nums[i];
+    if(obj[diff]!==undefined){
+        return [obj[diff],i]
+    } else{
+        obj[nums[i]] = i
+    }
+  }
+};
+
+const testCases=[{nums:[2,7,11,15],target:9},{nums:[3,2,4],target:6},{nums:[1,8,3,3],target:6}]
+
+render(
+  <RunTestCases
+    mainFn= {twoSumWithObject}
+    testCases={testCases}
+  />
+)
+```
+
+
+#### Option 3: Using one for loop with an extra Map variable
+
+
+```jsx live noInline
+function twoSumWithMap(nums, target) {
+  let map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    const diff = target - nums[i];
+    if (map.has(diff)) {
+      return [map.get(diff), i];
+    }else {
+      map.set(nums[i], i);
+    }
+  }
+}
+
+const testCases=[{nums:[2,7,11,15],target:9},{nums:[3,2,4],target:6},{nums:[1,8,3,3],target:6}]
+
+render(
+  <RunTestCases
+    mainFn= {twoSumWithMap}
+    testCases={testCases}
+  />
+)
+```
+
